@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"time"
 
-	"GPL/object"
+	object "GPL/parser/obj"
 )
 
 var builtins = map[string]*object.Builtin{

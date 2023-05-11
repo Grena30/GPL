@@ -1,7 +1,7 @@
 package parser
 
 import (
-	ast "GPL/literals"
+	ast "GPL/lexer/literals"
 	"GPL/token"
 	"fmt"
 )

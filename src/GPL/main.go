@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"GPL/repl"
+	repl "GPL/resp"
 )
 
 func main() {
@@ -19,4 +19,6 @@ func main() {
 		repl.ExecuteFile(path, os.Stdout)
 		return
 	}
+
+	repl.Start(os.Stdin, os.Stdout)
 }

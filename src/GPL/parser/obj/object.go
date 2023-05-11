@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	ast "GPL/literals"
+	ast "GPL/lexer/literals"
 )
 
 type Environment struct {

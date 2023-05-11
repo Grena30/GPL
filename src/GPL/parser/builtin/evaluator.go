@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strconv"
 
-	ast "GPL/literals"
-	"GPL/object"
+	ast "GPL/lexer/literals"
+	object "GPL/parser/obj"
 )
 
 var (

@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"GPL/lexer"
-	ast "GPL/literals"
+	ast "GPL/lexer/literals"
 	"GPL/token"
 )
 

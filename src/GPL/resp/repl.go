@@ -7,10 +7,10 @@ import (
 	"io/ioutil"
 	"log"
 
-	evaluator "GPL/builtin"
 	"GPL/lexer"
-	"GPL/object"
 	"GPL/parser"
+	evaluator "GPL/parser/builtin"
+	object "GPL/parser/obj"
 )
 
 const PROMPT = ">> "
