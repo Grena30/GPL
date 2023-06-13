@@ -1,0 +1,33 @@
+
+write("Welcome to the guess game\n");
+write("-------------------------\n");
+write("You have to choose a number between 1 and 100\n");
+write("To find the hidden number\n");
+write("\n");
+trials = 10;
+num = rand(100);
+i = 0;
+//write(num + "\n");
+
+for (i < trials) {
+
+    write("What is your guess: ");
+    guess = int(read());
+    write("\n");
+
+    if (guess == num){
+        write("Good job you guessed correctly\n");
+        break;
+    }
+
+    if (guess < num){
+        write("Guess higher\n");
+    }
+
+    if (guess > num){
+        write("Guess lower\n");
+    }
+
+    i = i + 1;
+    write("Guesses left: " + (trials - i) + "\n");
+}
