@@ -1,0 +1,47 @@
+
+sort = fn(arr, len){
+
+    i = 0;
+    for ( i < len){
+        
+        write(arr[i], "\n");
+        i = i + 1;
+    }   
+}
+
+pow = fn(num, power){
+
+    i = 0;
+    result = 1;
+    for (i < power){
+        result = result * num;
+        i = i + 1;
+    }
+
+    return result;
+
+}
+
+array_generator = fn(len, limit){
+
+    i = 0;
+    arr = [];
+
+    for (i < len){
+        n = rand(limit) + pow(-1, i) * i * rand(100)/50; 
+        arr = push(arr, n);
+        i = i + 1;
+    }
+    return arr;
+}
+
+write("Array Generator\n");
+write("Input the length of the array: ");
+len = int(read());
+
+write("Input the maximum value of the elements: ");
+maximum = int(read());
+
+arr = array_generator(len, maximum);
+write("Here is your array: ");
+write("\n", arr, "\n");

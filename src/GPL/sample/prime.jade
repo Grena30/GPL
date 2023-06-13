@@ -1,0 +1,36 @@
+prime = fn(p){
+
+    write(p + "\n");
+
+    if (p > 1){
+        i = 2;
+        limit = p/2 + 1;
+        limit_calc = 5;
+        divisor = 0;
+        
+        for (i < limit){
+            
+            j = 1;
+            temp = p;
+
+            for (j < 5){
+                result = temp / i
+                if (results * i == temp){
+                    divisor = 1;
+                    return 0;
+                }
+
+                j = j + 1;
+
+
+            }
+            i = i + 1;
+        }
+
+    }
+    return 1;
+
+}
+
+m = prime(6);
+write(m);
