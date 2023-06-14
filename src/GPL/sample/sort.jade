@@ -1,10 +1,36 @@
 
+sort = fn(arr, len){
+
+    i = 0;
+    arr_new = [];
+    for ( i < len){
+
+        j = 0;
+        min = arr_min(arr, len);
+        for (j < len){
+            if (arr[j] == min){
+                arr = pop(arr, j);
+                arr_new = push(arr_new, min);
+                len = len - 1;
+                i = -1;
+            }
+            j = j + 1;
+
+        }
+
+        i = i + 1;
+
+    }
+    return arr_new;
+}
+
+
 arr_min = fn(arr, len){
 
     i = 0;
     min = arr[0];
     for ( i < len){
-        min = minimum(min, arr[i]);
+        min = MIN(min, arr[i]);
         i = i + 1;
     }
     return min;  
@@ -35,7 +61,7 @@ pow = fn(num, power){
 
 }
 
-minimum = fn(n, m){
+MIN = fn(n, m){
     if (n < m) {
         return n;
     } else {
@@ -69,7 +95,6 @@ i = 0;
 arr = [];
 len = 0;
 maximum = 0;
-arr_sort = [];
 
 for ( i < INF ){
 
@@ -77,7 +102,8 @@ for ( i < INF ){
     write("2. Display Array\n");
     write("3. Minimun Number\n");
     write("4. Maximum Number\n");
-    write("5. Exit\n");
+    write("5. Sort the Array\n");
+    write("6. Exit\n");
     write("Choice: ")
     choice = int(read());
 
@@ -110,6 +136,12 @@ for ( i < INF ){
     }
 
     if (choice == 5){
+        arr = sort(arr, len);
+        write("Sorted array: \n");
+        write("\n", arr, "\n");
+    }
+
+    if (choice == 6){
         break;
     }
 }
